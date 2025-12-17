@@ -1,0 +1,596 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about Raki Beauty's passion for Bridal Hair Styling, צמות, and professional hair design. Meet our expert team and discover our commitment to excellence.">
+<meta name="keywords" content="Bridal Hair Styling, צמות, תסרוקות ערב, professional hair salon">
+<title>Our Story & Expertise — Raki Beauty</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '8271e640-9ad1-41a6-ba99-3c82168d80b7',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+<nav class="navbar" id="navbar">
+<div class="container nav-container">
+<div class="nav-brand">
+<a href="/" class="logo-link">
+<img src="/assets/raki-beauty-beauty-and-personal-care-logo.webp" alt="Raki Beauty" class="logo" />
+</a>
+</div>
+<button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+<svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+</svg>
+<svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+<path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+</svg>
+</button>
+<button class="phone-header-btn" aria-label="Call us">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+</svg>
+</button>
+<ul class="nav-menu" id="navMenu">
+<li><a href="/services">Services</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+<div class="nav-cta-container">
+<li class="nav-cta-item">
+<a href="/contact" class="nav-cta-btn">Book Now</a>
+</li>
+</div>
+</div>
+</nav>
+<section class="page-header">
+<div class="container">
+<h1>The Artistry Behind Raki Beauty</h1>
+<h3>Where passion for hair styling meets professional excellence and personalized care</h3>
+</div>
+</section>
+<section class="about-story">
+<div class="container">
+<div class="story-content">
+<h2>Our Story</h2>
+<p>Raki Beauty was founded with a singular vision: to create a sanctuary where every client experiences the transformative power of professional hair styling. Our journey began with a deep passion for Bridal Hair Styling and traditional techniques like צמות, combined with a commitment to making every person who walks through our doors feel beautiful, confident, and celebrated.</p>
+<p>What started as a small studio dedicated to bridal beauty has blossomed into a full-service hair styling destination. We've built our reputation on delivering exceptional results for weddings, special occasions, and everyday elegance. Each hairstyle we create tells a story—your story—and we're honored to be part of your most memorable moments.</p>
+<p>Over the years, we've had the privilege of styling countless brides on their wedding days, creating stunning תסרוקות ערב for elegant evening events, and mastering the art of תוספות שיער בשיטת תפירה to help clients achieve their dream hair. Every service we offer reflects our dedication to quality, artistry, and the unique beauty of each individual we serve.</p>
+<p>Today, Raki Beauty stands as a trusted name in professional hair styling, known for our expertise in Bridal Hair Styling, our mastery of צמות techniques, and our unwavering commitment to client satisfaction. We continue to evolve, learning new techniques and staying current with trends while honoring the timeless traditions that make hair styling an art form.</p>
+</div>
+</div>
+</section>
+<section class="about-values">
+<div class="container">
+<h2>Our Values &amp; Approach</h2>
+<div class="values-grid">
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-heart"></i>
+</div>
+<h3>Personalized Care</h3>
+<p>We believe every client is unique, and so is every hairstyle we create. Our approach centers on understanding your vision, listening to your preferences, and collaborating closely to achieve results that exceed your expectations.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-star"></i>
+</div>
+<h3>Professional Excellence</h3>
+<p>Our team continuously trains in the latest Bridal Hair Styling techniques, צמות methods, and industry innovations. We maintain the highest standards of professionalism in every service we provide.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-leaf"></i>
+</div>
+<h3>Hair Health First</h3>
+<p>Beautiful styling should never compromise hair health. We use premium products and protective techniques, especially in services like תוספות שיער בשיטת תפירה, to ensure your hair remains healthy and strong.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-users"></i>
+</div>
+<h3>Cultural Respect</h3>
+<p>We honor diverse traditions and cultural practices in hair styling, from traditional Henna ceremonies to contemporary צמות patterns, treating every cultural element with respect and authenticity.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-gem"></i>
+</div>
+<h3>Attention to Detail</h3>
+<p>From the initial consultation to the final styling touch, we obsess over every detail. Whether creating תסרוקות ערב or Bridal Hair Styling, perfection is our standard.</p>
+</div>
+<div class="value-card">
+<div class="value-icon">
+<i class="fas fa-smile"></i>
+</div>
+<h3>Client Satisfaction</h3>
+<p>Your happiness is our ultimate measure of success. We're not satisfied until you're thrilled with your hairstyle and feel absolutely confident and beautiful.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="about-expertise">
+<div class="container">
+<h2>Our Expertise</h2>
+<div class="expertise-content">
+<p>At Raki Beauty, our expertise spans a comprehensive range of professional hair styling services. We've dedicated countless hours to perfecting our craft, specializing in areas that require both technical skill and artistic vision.</p>
+<p>Our Bridal Hair Styling services represent the pinnacle of our artistry. We understand that your wedding day is one of life's most important moments, and we approach every bridal consultation with the gravity and care it deserves. From romantic updos to flowing curls, from classic elegance to modern sophistication, we create bridal hairstyles that make you feel like the most beautiful version of yourself.</p>
+<p>The art of צמות holds a special place in our service offerings. Our stylists have mastered various braiding techniques, from intricate protective styles to elegant braided updos perfect for any occasion. We understand how to work with different hair textures and types, creating צמות that are not only beautiful but also promote hair health and longevity.</p>
+<p>Our תסרוקות ערב services showcase our ability to create glamorous, sophisticated hairstyles for special evening events. Whether you're attending a gala, formal dinner, or milestone celebration, we design hairstyles that photograph beautifully, hold perfectly throughout the event, and make you feel confident and elegant.</p>
+<p>We're also proud specialists in תוספות שיער בשיטת תפירה, offering professional hair extension services that deliver natural-looking length and volume. Our sew-in technique is gentle on natural hair while providing secure, long-lasting results that blend seamlessly and feel comfortable for extended wear.</p>
+<p>Beyond these signature services, our team brings expertise in traditional Henna styling, special occasion updos, hair consultations, and personalized styling advice. We stay current with industry trends while respecting timeless techniques, ensuring we can meet any hair styling need with confidence and skill.</p>
+</div>
+</div>
+</section>
+<section class="about-commitment">
+<div class="container">
+<h2>Our Commitment to You</h2>
+<div class="commitment-content">
+<p>When you choose Raki Beauty, you're choosing more than just a hair salon—you're choosing a partner in your beauty journey. We commit to providing exceptional service, honest advice, and results that make you feel absolutely wonderful about your appearance.</p>
+<p>We promise to listen carefully to your vision and concerns, offering professional guidance while respecting your preferences and style. Whether you're planning your wedding and need perfect Bridal Hair Styling, seeking expert צמות for protective styling, or preparing for a special evening with תסרוקות ערב, we're here to make your hair dreams a reality.</p>
+<p>Our commitment extends beyond the styling chair. We believe in building lasting relationships with our clients, becoming your trusted hair care partner for all of life's important moments and everyday beauty needs. We're here to celebrate with you, support you, and ensure you always feel confident and beautiful.</p>
+<p>Thank you for considering Raki Beauty for your hair styling needs. We look forward to welcoming you to our salon and creating something beautiful together.</p>
+</div>
+</div>
+</section>
+<section class="about-cta">
+<div class="container">
+<h2>Experience the Raki Beauty Difference</h2>
+<p>Ready to discover what personalized, professional hair styling can do for you? Book your appointment today and let us show you why clients trust Raki Beauty for their most important occasions and everyday beauty needs.</p>
+<a href="/contact" class="btn-cta">Book Your Appointment</a>
+</div>
+</section>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 Raki Beauty. All rights reserved.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="Privacy Policy">
+              Privacy Policy
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="Accessibility">
+              Accessibility
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="Terms & Conditions">
+              Terms & Conditions
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>Generated by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '8271e640-9ad1-41a6-ba99-3c82168d80b7';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
+</body></html>
